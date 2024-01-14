@@ -4,6 +4,8 @@
 - [Reference Types](#reference_types)
 - [Math Operations](#math_operations)
 - [Operators](#operators)
+- [Conditionals](#conditionals)
+- [loops](#loops)
 - [Ternary Operator](#ternary_operator)
 - [Switch Statement](#switch_statement)
 - [Working with Lists](#working_with_lists)
@@ -17,7 +19,7 @@
 - [Method Sections in Program.cs](#method_sections_in_program.cs)
 - [Method Section in User.cs](#method_section_in_user.cs)
 
-
+_____
 ## Data_Types
 
 - **Variable:** Stores some value (e.g., `var X`)
@@ -28,6 +30,8 @@
 - **Operand:** The things that the operator works on (e.g., parts of the equation)
 - **Initialization:** Variables cannot be used without being declared first in C# (use `new` or give it a value to initiate)
 - **Nullable Types:** Allows a variable to be passed through to the console without having a value (e.g., `int? x = null;`)
+
+_____
 ### Value_Types
 
 - Integers: Solid numbers that can be negative or positive (e.g., `int a = -5;`)
@@ -37,10 +41,14 @@
 - Doubles: Store decimals up to 52 bits and are more accurate (e.g., `double e = 5.5;`)
 - Decimals: Can hold 38 digits at the cost of more memory (e.g., `decimal f = 5.5M;`)
 - Booleans: Simple True (1) or False (0) variables (e.g., `bool g = true;`)
+
+_____
 ### Reference_Types
 
 - Strings: Datatypes that contain data (e.g., `string h = "Hello";`)
 - Arrays: Store multiple values (e.g., `int[] a = { 3 };`)
+
+_____
 ## Math_Operations
 
 - **Round:** Allows us to round the value (e.g., `Math.Round(x, 0, MidpointRounding.AwayFromZero)`)
@@ -48,6 +56,8 @@
 - **Min/Max:** Returns the smaller/larger of two numbers (e.g., `Math.Max(y, x);`)
 - **Abs:** Outputs the positive version of a number (e.g., `Math.Abs(x);`)
 - **Sign:** Outputs a number indicating if a value is positive/negative or 0 (e.g., `Math.Sign(y);`)
+
+_____
 ## Operators
 
 - `<`: Less than
@@ -59,6 +69,133 @@
 - `&&`: AND parameter (e.g., `if (x == 1 && y == 1) { Console.WriteLine("x and y equal 1"); }`)
 - `||`: OR parameter evaluates true if either operand is true (e.g., `if (x == 2 || y == 2) { Console.WriteLine("x or y == 2"); }`)
 - `!=`: NOT Equal checks if operand is not equal to the input (e.g., `if (x != 2) { Console.WriteLine("x is not 2"); }`)
+
+_____
+## Conditionals
+
+## if statement
+
+- Test a condition
+- Execute code block if condition is true
+
+```csharp
+if (condition) // If condition is true
+{
+    // Code to execute
+}
+```
+
+### if...else statement
+
+- Test a condition
+- Execute first block if true, else execute second block
+
+```csharp
+if (condition) // If condition is true
+{
+    // Code to execute if condition is true
+}
+else // If condition is false
+{
+    // Code to execute if condition is false
+}
+```
+
+### if...else if...else statement
+
+- Test multiple conditions
+- Execute only the first true condition's block
+
+```csharp
+if (condition1) // If first condition is true
+{
+    // Code to execute if condition1 is true
+}
+else if (condition2) // If second condition is true
+{
+    // Code to execute if condition2 is true
+}
+else // If no conditions are true
+{
+    // Code to execute if both conditions are false
+}
+```
+
+## while loop
+
+- Continue looping as long as a condition is true
+
+```csharp
+while (condition) // While condition is true
+{
+    // Code to execute during each iteration
+}
+```
+
+### do...while loop
+
+- Execute code once, then repeat loop as long as a condition is true
+
+```csharp
+do // Do at least once
+{
+    // Code to execute during each iteration
+}
+while (condition); // Continue if condition is true
+```
+
+### for loop
+
+- Loop for a specified number of times
+
+```csharp
+for (int i = 0; i < 5; i++) // Initialize i; continue if i < 5; increment i each loop
+{
+    // Code to execute during each iteration
+}
+```
+
+### foreach loop
+
+- Loop through each item in a collection
+
+```csharp
+foreach (type item in collection) // For each item of type in collection
+{
+    // Code to execute during each iteration
+}
+```
+
+### break statement
+
+- Exit the loop immediately
+
+```csharp
+for (int i = 0; i < 10; i++) // Loop from i = 0 to i < 10
+{
+    if (i == 4) // If i equals 4
+    {
+        break; // Exit the loop
+    }
+}
+```
+
+### continue statement
+
+- Skip the current iteration and continue with the next one
+
+```csharp
+for (int i = 0; i < 10; i++) // Loop from i = 0 to i < 10
+{
+    if (i == 4) // If i equals 4
+    {
+        continue; // Skip to the next iteration
+    }
+    // Code here will not execute when i equals 4
+}
+```
+
+_____
 ## Ternary_Operator
 
 - Like an if-else statement but with the syntax shown.
@@ -75,6 +212,8 @@ int pointsEarned = correct ? 10 : 0;
 // This will print '10' because 'correct' is true.
 Console.WriteLine(pointsEarned);
 ```
+
+_____
 ## Switch_Statement
 
 - Like an if statement but with multiple conditions being checked.
@@ -106,6 +245,7 @@ switch(age)
 }
 ```
 
+_____
 ## Working_with_Lists
 
 - Add, insert, remove, and clear list items.
@@ -136,6 +276,7 @@ foreach (List<int> grades in studentGrades)
 }
 ```
 
+_____
 ## Jagged_Arrays
 
 - Working with jagged arrays and iterating through them.
@@ -164,6 +305,7 @@ foreach (int[] grades in studentGrades)
 }
 ```
 
+_____
 ## 2D_Arrays
 
 - Working with 2D arrays and iterating through them.
@@ -191,6 +333,7 @@ for (int i = 0; i < grades.GetLength(0); i++)
 }
 ```
 
+_____
 ## List_and_Array_Conversion
 
 - Converting a list to an array and vice versa.
@@ -206,6 +349,7 @@ int[] myArr = stuff.ToArray();
 List<int> myList = myArr.ToList();
 ```
 
+_____
 ## List_Reversing
 
 - Working with lists to reverse the order or sort the elements.
@@ -241,6 +385,7 @@ foreach (int s in stuff)
 }
 ````
 
+_____
 ## Adding_Values_into_a_New_User_Type
 
 - Creating instances of a User type and assigning values to properties.
@@ -279,6 +424,7 @@ users.Add(you);
 // At this point, 'users' list contains two User objects, 'me' and 'you'
 ```
 
+_____
 ## Methods_and_Saving_to_a_List_via_a_Method
 
 - Demonstrates how to populate a list of Users using a method.
@@ -344,6 +490,7 @@ public class User
 }
 ```
 
+_____
 ## Overloading_a_Method
 
 - Create method overloads for different functionality with the same name.
@@ -393,6 +540,8 @@ User user = new User
 Console.WriteLine(user.Output()); // Calls the first method and prints "My name is Jane Doe"
 Console.WriteLine(user.Output(3)); // Calls the overloaded method and prints "Jane Doe" three times, each on a new line
 ```
+
+_____
 ## Method_Sections_in_Program.cs
 
 - Call methods from the main entry point of the program.
@@ -446,6 +595,7 @@ public class Program
 }
 ```
 
+_____
 ## Method_Section_in_User.cs
 
 - Outlines various methods and properties within the User class to manage and search user data.
@@ -533,6 +683,8 @@ public class User
     }
 }
 ```
+
+_____
 
 *The following content was produced by Cassius Fragomeni*
 
